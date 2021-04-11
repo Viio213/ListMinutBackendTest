@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  latitude: 9.99
+  longitude: 9.99
+  zip: 1
+  title: MyText
+  user: MyText
+
+two:
+  description: MyText
+  latitude: 9.99
+  longitude: 9.99
+  zip: 1
+  title: MyText
+  user: MyText

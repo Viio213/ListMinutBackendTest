@@ -1,0 +1,26 @@
+<h1>Jobs</h1>
+
+<div class="col-12 col-offset-2 ">
+    <div class="row">
+      <% @jobs.each do |job| %>
+        <div class="card" style="margin-bottom: 10px; width: 30%">
+            <div class="row justify-content-center">
+                <h5 class="col-8 ">
+                    <%= link_to job.title, job %>
+                </h5>
+                <img class="card-img col-2 mt-1" style="width:20px; height: 20px" <%= image_tag("leaf.png", :alt => "rss feed") %>
+            </div>
+            <hr>
+
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= job.user %>
+                </h5>
+                <p class="card-text">
+                    <%= job.zip %>
+                </p>
+            </div>
+        </div>
+      <%end%>
+    </div>
+</div>
