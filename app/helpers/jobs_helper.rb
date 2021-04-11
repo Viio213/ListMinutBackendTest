@@ -29,9 +29,8 @@ module JobsHelper
             @final_output = 'Error'
         else
             #@final_output = @output[0]['label']
-            @final_output = 50
         end
   
-      return @output
+      return @url
     end
 end

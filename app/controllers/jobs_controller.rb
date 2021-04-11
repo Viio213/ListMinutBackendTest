@@ -1,6 +1,10 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    if params[:order] == 'zip'
+      @jobs = Job.all.order('zip')    
+    else
+      @jobs = Job.all
+    end
   end
 
   def show
@@ -8,4 +12,12 @@ class JobsController < ApplicationController
     
     @response = helpers.getWeatherApi job: @job 
   end
+
+  def my_method job: 
+    Rails.cache.fetch("#{job.id}/competing_price", expires_in: 1.hours) do
+      @currentweather = helpers.getWeatherApi job: job
+    end
+  end
+
+  helper_method :my_method
 end
