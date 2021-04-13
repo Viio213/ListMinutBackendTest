@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_11_123229) do
+ActiveRecord::Schema.define(version: 2021_04_13_010652) do
 
   create_table "jobs", force: :cascade do |t|
     t.text "description"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 2021_04_11_123229) do
     t.text "user"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "temp"
+    t.decimal "tempfeels"
+    t.text "iconurl"
+    t.text "icondescription"
   end
-
 end

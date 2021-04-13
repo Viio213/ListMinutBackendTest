@@ -1,7 +1,7 @@
 <h1>Jobs</h1>
 
 <p>Sort by: 
-<%= link_to "ZipCode", jobs_path(order: 'zip') %>
+    <%= link_to "Weather", jobs_path(order: 'filter') %>
 </p>
 
 <div class="col-12 col-offset-2 ">
@@ -12,7 +12,7 @@
                 <h5 class="col-8 ">
                     <%= link_to job.title, job %>
                 </h5>
-                <img class="card-img col-2 mt-1" style="width:20px; height: 20px" <%= image_tag("leaf.png", :alt => "rss feed") %>
+                <img class="card-img col-2 mt-1" style="width:20px; height: 20px" <%= image_tag("leaf.png", :alt => "Can't access assets") %>
             </div>
             <hr>
 
@@ -20,9 +20,11 @@
                 <h5 class="card-title">
                     <%= job.user %>
                 </h5>
+
                 <p class="card-text">
-                    <%= my_method job: job %>
-                </p>
+                    Weather : <%= job.temp%> °C, feels like : <%= job.tempfeels%> °C
+                </p>  
+                <img src="<%= job.iconurl%>" alt= "<%= job.icondescription%>">                
             </div>
         </div>
       <%end%>

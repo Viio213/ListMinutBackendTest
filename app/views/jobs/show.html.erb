@@ -3,6 +3,7 @@
 <p> <%= @job.description %> </p>
 <p> USER : <%= @job.user %> </p>
 <p> ZIP CODE : <%= @job.zip %> </p>
-<p><%= @response %></p>
-<p><%= @responseString %></p>
-<p><%= @responseNil %></p>
+<p>
+    Weather : <%= @job.temp%> °C, feels like : <%= @job.tempfeels%> °C
+</p>  
+<img src="<%= @job.iconurl%>" alt= "<%= @job.icondescription%>"> 
