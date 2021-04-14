@@ -14,6 +14,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'bootstrap', '~> 4.6'
 gem 'jquery-rails', '~> 4.4'
+gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
+gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
+gem 'factory_girl_rails', '~> 4.9'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

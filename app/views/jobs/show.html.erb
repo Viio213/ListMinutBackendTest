@@ -1,9 +1,31 @@
-<h1><%= @job.title %></h1>
+<div class="container mt-5 border border-warning">
+    <div class="row col-12">
+        <h1>
+            <%= @job.title %>
+        </h1>
+    </div>
+    <div class="row col-12 pl-0 d-flex">
+        <div class="col-8 mr-5 border-right border-success mt-2">
+            <p>
+                <%= @job.description %>
+            </p>
+        </div>
 
-<p> <%= @job.description %> </p>
-<p> USER : <%= @job.user %> </p>
-<p> ZIP CODE : <%= @job.zip %> </p>
-<p>
-    Weather : <%= @job.temp%> °C, feels like : <%= @job.tempfeels%> °C
-</p>  
-<img src="<%= @job.iconurl%>" alt= "<%= @job.icondescription%>"> 
+        <div class="col-2 mt-2">
+            <p class="row col-12"> USER :
+                <%= @job.user %>
+
+            </p>
+            <p class="row col-12"> ZIP CODE :
+                <%= @job.zip %>
+            </p>
+        </div>
+    </div>
+    <div class="row col-8 justify-content-end" style ="align-items: center">
+        <p class="mr-5">
+            Weather :
+            <%= @job.temp%> °C, feels like : <%= @job.tempfeels%> °C
+        </p>
+        <img src="<%= @job.iconurl%>" alt="<%= @job.icondescription%>">
+    </div>
+</div>

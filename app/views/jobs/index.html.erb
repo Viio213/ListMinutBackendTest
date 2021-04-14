@@ -7,26 +7,26 @@
 <div class="col-12 col-offset-2 ">
     <div class="row justify-content-center">
       <% @jobs.each do |job| %>
-        <div class="card" style="margin-bottom: 10px; width: 20rem">
-            <div class="row justify-content-center">
-                <h5 class="col-8 ">
-                    <%= link_to job.title, job %>
-                </h5>
-                <img class="card-img col-2 mt-1" style="width:20px; height: 20px" <%= image_tag("leaf.png", :alt => "Can't access assets") %>
-            </div>
-            <hr>
+            <div class="card" style="margin-bottom: 10px; width: 20rem">
+                <div class="row justify-content-center">
+                    <h5 class="col-8 ">
+                        <%= link_to job.title, job %>
+                    </h5>
+                    <img class="card-img col-2 mt-1" style="width:20px; height: 20px" <%= image_tag("leaf.png", :alt => "Can't access assets") %>
+                </div>
+                <hr>
 
-            <div class="card-body">
-                <h5 class="card-title">
-                    <%= job.user %>
-                </h5>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= job.user %>
+                    </h5>
 
-                <p class="card-text">
-                    Weather : <%= job.temp%> °C, feels like : <%= job.tempfeels%> °C
-                </p>  
-                <img src="<%= job.iconurl%>" alt= "<%= job.icondescription%>">                
+                    <p class="card-text">
+                        Weather : <%= job.temp%> °C, feels like : <%= job.tempfeels%> °C
+                    </p>  
+                    <img src="<%= job.iconurl%>" alt= "<%= job.icondescription%>">                
+                </div>
             </div>
-        </div>
-      <%end%>
+        <%end%>
     </div>
 </div>
